@@ -44,6 +44,17 @@ Admin Login---------------
 }
 
 
+Loan Programs---------------
+
+{
+        "loanId": 1001,
+        "loanType": "Home Loan",
+        "loanTenure": 12,
+        "loanAmount": 150000,
+        "loanInterest": 9.5
+    }
+
+
 
 update application----------
 
