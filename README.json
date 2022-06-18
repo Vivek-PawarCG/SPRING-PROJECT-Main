@@ -1,6 +1,6 @@
 # SPRING-PROJECT-Main
 
-Add customer---- http://localhost8081/loanapp/customer/add
+Add customer---- (POST) http://localhost:8081/loanapp/customer/add
 
 {
      "password" : "cutomer@12",
@@ -15,7 +15,7 @@ Add customer---- http://localhost8081/loanapp/customer/add
     "panNumber": "1234567890"
 }
 
-Add application----------
+Add application----------(POST) http://localhost:8081/loanapp/loanapplication/add
 
 {
 "applicationDate" : "2023-05-21",
@@ -27,7 +27,7 @@ Add application----------
 
 
 
-LAD Login---------------
+LAD Login---------------(POST)  http://localhost:8081/loanapp/signin/lad/login
 
 {
     "userId":"ladadmin",
@@ -36,7 +36,7 @@ LAD Login---------------
 
 
 
-Admin Login---------------
+Admin Login---------------(POST)  http://localhost:8081/loanapp/signin/admin/login
 
 {
     "userId":"admin",
@@ -44,7 +44,7 @@ Admin Login---------------
 }
 
 
-Loan Programs---------------
+Loan Programs---------------(POST)  http://localhost:8081/loanapp/admin/addLoan
 
 {
         "loanId": 1001,
@@ -56,7 +56,7 @@ Loan Programs---------------
 
 
 
-update application----------
+update application---------- (PUT) http://localhost:8081/loanapp/loanapplication/lad/update
 
 
 {
@@ -70,7 +70,7 @@ update application----------
     "status": "WAITING_FOR_LOAN_APPROVAL"
     }
 
-APPROVED----------------
+APPROVED---------------- (PUT) http://localhost:8081/loanapp/verify/status
 
 {
     "applicationId": 216,
