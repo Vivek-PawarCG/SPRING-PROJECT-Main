@@ -117,7 +117,7 @@ Admin Login--------------- http://localhost:8081/loanapp/signin/admin/login
     "password":"root"
 }
 
-Loan Programs--------------- http://localhost:8081/loanapp/admin/addLoan
+ADD Loan Programs--------------- http://localhost:8081/loanapp/loans/admin/addLoan
 
 {
         "loanId": 1001,
@@ -127,5 +127,10 @@ Loan Programs--------------- http://localhost:8081/loanapp/admin/addLoan
         "loanInterest": 9.5
     }
 
+EDIT Loan Programs--------------- http://localhost:8081/loanapp/loans/admin/editLoan
+
+VIEW Loan Programs--------------- http://localhost:8081/loanapp/loans/getLoan
+
+DELETE Loan Programs--------------- http://localhost:8081/loanapp/loans/admin/deleteLoan/(id)
 
 
