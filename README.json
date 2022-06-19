@@ -1,6 +1,6 @@
-# SPRING-PROJECT-Main
+# SPRING-PROJECT-Main JSON FILE
 
-Add customer---- (POST) http://localhost:8081/loanapp/customer/add
+Add customer---- http://localhost:8081/loanapp/customer/add
 
 {
      "password" : "cutomer@12",
@@ -15,7 +15,29 @@ Add customer---- (POST) http://localhost:8081/loanapp/customer/add
     "panNumber": "1234567890"
 }
 
-Add application----------(POST) http://localhost:8081/loanapp/loanapplication/add
+Update Customer------------http://localhost:8081/loanapp/customer/update
+
+{
+    "userId": 1,
+    "password": "cutomer@1289",
+    "role": "customer",
+    "customerName": "PaulSharma",
+    "mobileNumber": "9045407223",
+    "emailId": "SharmanaPaul21@gmail.com",
+    "dateOfBirth": "1999-04-11",
+    "gender": "Male",
+    "annualSalary": "560000",
+    "aadharNumber": "123456789123",
+    "panNumber": "ABCCC1234H"
+}
+
+
+View Customer by ID-------------http://localhost:8081/loanapp/customer/view/(id)
+
+Delete Customer by ID-------------http://localhost:8081/loanapp/customer/delete/(id)
+
+
+Add application----------
 
 {
 "applicationDate" : "2023-05-21",
@@ -25,9 +47,61 @@ Add application----------(POST) http://localhost:8081/loanapp/loanapplication/ad
 "status" : "WAITING_FOR_LOAN_APPROVAL"
 }
 
+Update Application------ http://localhost:8081/loanapp/loanapplication/update
+
+{
+    "applicationId": 1,
+    "applicationDate": "2023-05-21",
+    "customer": {
+        "userId": 1,
+        "password": "cutomer@1289",
+        "role": "customer",
+        "customerName": "PaulSharma",
+        "mobileNumber": "9045407223",
+        "emailId": "SharmanaPaul21@gmail.com",
+        "dateOfBirth": "1999-04-11",
+        "gender": "Male",
+        "annualSalary": "560000",
+        "aadharNumber": "123456789123",
+        "panNumber": "ABCCC1234H"
+    },
+    "loanAppliedAmount": 340000.0,
+    "loanApprovedAmount": 0.0,
+    "loanStatusApproval": false,
+    "adminApproval": false,
+    "status": "WAITING_FOR_LOAN_APPROVAL"
+}
+
+Delete Application------ http://localhost:8081/loanapp/loanapplication/delete/(id)
 
 
-LAD Login---------------(POST)  http://localhost:8081/loanapp/signin/lad/login
+Change Status----------  http://localhost:8081/loanapp/verify/status
+
+{
+    "applicationId": 1,
+    "applicationDate": "2023-05-21",
+    "customer": {
+        "userId": 1,
+        "password": "cutomer@1289",
+        "role": "customer",
+        "customerName": "PaulSharma",
+        "mobileNumber": "9045407223",
+        "emailId": "SharmanaPaul21@gmail.com",
+        "dateOfBirth": "1999-04-11",
+        "gender": "Male",
+        "annualSalary": "560000",
+        "aadharNumber": "123456789123",
+        "panNumber": "ABCCC1234H"
+    },
+    "loanAppliedAmount": 340000.0,
+    "loanApprovedAmount": 0.0,
+    "loanStatusApproval": true,
+    "adminApproval": true,
+    "status": "APPROVED"
+}
+
+
+LAD Login--------------- http://localhost:8081/loanapp/signin/lad/login
 
 {
     "userId":"ladadmin",
@@ -36,15 +110,14 @@ LAD Login---------------(POST)  http://localhost:8081/loanapp/signin/lad/login
 
 
 
-Admin Login---------------(POST)  http://localhost:8081/loanapp/signin/admin/login
+Admin Login--------------- http://localhost:8081/loanapp/signin/admin/login
 
 {
     "userId":"admin",
     "password":"root"
 }
 
-
-Loan Programs---------------(POST)  http://localhost:8081/loanapp/admin/addLoan
+Loan Programs--------------- http://localhost:8081/loanapp/admin/addLoan
 
 {
         "loanId": 1001,
@@ -55,33 +128,4 @@ Loan Programs---------------(POST)  http://localhost:8081/loanapp/admin/addLoan
     }
 
 
-
-update application---------- (PUT) http://localhost:8081/loanapp/loanapplication/lad/update
-
-
-{
-    "applicationId": 216,
-    "applicationDate": "2023-05-21",
-    "customer":{"userId":214},
-    "loanAppliedAmount": 140000,
-    "loanApprovedAmount": 100000,
-    "loanStatusApproval": true,
-    "adminApproval": true,
-    "status": "WAITING_FOR_LOAN_APPROVAL"
-    }
-
-APPROVED---------------- (PUT) http://localhost:8081/loanapp/verify/status
-
-{
-    "applicationId": 216,
-    "applicationDate": "2021-05-31",
-    "customer":{"userId":214},
-    "loanAppliedAmount": 140000,
-    "loanApprovedAmount": 100000,
-    "loanStatusApproval": true,
-    "loanStatusApproval": true,
-    "adminApproval": true,
-    "status": "APPROVED"
-
-}
 
