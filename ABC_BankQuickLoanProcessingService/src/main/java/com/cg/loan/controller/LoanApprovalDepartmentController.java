@@ -36,7 +36,7 @@ public class LoanApprovalDepartmentController {
 	// Method to check the connection with the webservice
 	@GetMapping("/home")
 	public String homeRequest() {
-		return "Welcome : Home Loan Application (Version 1.0)"; // returns String value
+		return "Welcome to ABC Bank Quick Loan Processing Service"; // returns String value
 	}
 
 	// Method to update the status of application and loan amount if approved,

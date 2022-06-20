@@ -3,7 +3,7 @@ package com.cg.loan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//This is the Main File
+//This is Main File
 
 @SpringBootApplication  // triggers auto-configuration and component scanning
 

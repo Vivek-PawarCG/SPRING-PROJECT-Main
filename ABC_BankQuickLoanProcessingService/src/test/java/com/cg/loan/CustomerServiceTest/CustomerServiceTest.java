@@ -69,7 +69,7 @@ class CustomerServiceTest {
 
 		Customer customerInput = new Customer(1, "customer","vishal123","Vishal","9876543210", "vishal@gmail.com", LocalDate.of(2022, 6, 10),"Male",490000,"1231231223","1234ytioui");
 		Optional<Customer> optionalCustomer = Optional.of(customerInput);
-		Customer updateCustomer = new Customer(1, "customer","vishal123","Vishal","9976543210", "vishal@gmail.com", LocalDate.of(2022, 6, 10),"Male",490000,"1231231223","1234ytioui");
+		Customer updateCustomer = new Customer(1, "customer","vishal123","Vishal","9976543210", "vishal123@gmail.com", LocalDate.of(2022, 6, 10),"Male",490000,"1231231223","1234ytioui");
 		when(customerRepo.findById(1)).thenReturn(optionalCustomer);
 		when(customerRepo.save(updateCustomer)).thenReturn(updateCustomer);
 		Customer customer_test = customerService.updateCustomer(updateCustomer);

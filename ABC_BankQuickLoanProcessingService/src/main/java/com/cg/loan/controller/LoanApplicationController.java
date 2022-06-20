@@ -45,7 +45,7 @@ public class LoanApplicationController {
 	//home" is to check the home page
 	@GetMapping("/home")
 	public String homeRequest() {
-		return "Welcome : Home Loan Application (Version 1.0)";
+		return "Welcome to ABC Bank Quick Loan Processing Service";
 	}
 
 	//add" is to add new loan application connected to a customer in the database
